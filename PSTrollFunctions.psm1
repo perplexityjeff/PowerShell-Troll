@@ -74,6 +74,7 @@ Function Set-AudioLevel {
 
 Function Start-CatFact 
 {
+    Add-Type -AssemblyName System.speech
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
     $CatFact = Invoke-RestMethod -Uri 'https://catfact.ninja/fact' -Method Get | Select-Object -ExpandProperty fact
     $SpeechSynth.Speak("did you know?")
@@ -87,6 +88,7 @@ Function Start-RickRoll
 
 Function Start-RowBoat 
 {
+    Add-Type -AssemblyName System.speech
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
     $SpeechSynth.Speak("Row, Row, Row your boat gently down the stream.  Merrily! Merrily! Merrily! Life is but a dream.")    
 }
@@ -110,6 +112,7 @@ Function Start-NotificationSoundSpam
 
 Function Send-VoiceMessage([string]$Message)
 {
+    Add-Type -AssemblyName System.speech
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
     $SpeechSynth.Speak($Message)
 }
