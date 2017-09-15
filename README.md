@@ -8,7 +8,7 @@ I am not responsible for any damage caused.
 ## Usage
 
 ```
-Invoke-WebRequest -Uri "https://github.com/perplexityjeff/PowerShell-Troll/blob/master/PSTrollFunctions.psm1" -OutFile "PSTrollFunctions.psm1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/perplexityjeff/PowerShell-Troll/master/PSTrollFunctions.psm1" -OutFile "PSTrollFunctions.psm1"
 Import-Module .\PSTrollFunctions.psm1
 ```
 
