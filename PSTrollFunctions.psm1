@@ -75,7 +75,6 @@ Function Set-AudioLevel {
 Function Start-CatFact 
 {
     Add-Type -AssemblyName System.speech
-    [System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}
     [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
     $CatFact = Invoke-RestMethod -Uri 'https://catfact.ninja/fact' -Method Get | Select-Object -ExpandProperty fact
