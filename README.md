@@ -16,15 +16,15 @@ Import-Module .\PSTrollFunctions.psm1
 <table>
   <tr>
     <td><tt>Start-AudioControl</tt></td>
-	<td>Enables you control the audio level by for example [audio]::Volume = 1 (100%)</td>
+	<td>Enables you to control the audio level by for example [audio]::Volume = 1 (100%)</td>
   </tr>
   <tr>
     <td><tt>Set-AudioMax</tt></td>
-	<td>Enables you control the audio level and set it to 100% to maximize Rick Ashley output.</td>
+	<td>Enables you to control the audio level and set it to 100% to maximize Rick Ashley output.</td>
   </tr>
   <tr>
     <td><tt>Set-AudioMin</tt></td>
-	<td>Enables you control the audio level and set it to 0% to minimize [insert far to loud of a song here].</td>
+	<td>Enables you to control the audio level and set it to 0% to minimize [insert far to loud of a song here].</td>
   </tr>
   <tr>
     <td><tt>Start-CatFact</tt></td>
