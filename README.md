@@ -1,9 +1,15 @@
 # PowerShell-Troll
-A PowerShell module that contains different functions that can be used for pranking for fellow co-worker. Keep in mind that this is a very simply module and not allot of time was spend making all of them as good or well documented at all.
+A PowerShell module that contains different functions that can be used for pranking your fellow co-worker. Keep in mind that this is a very simply module and not alot of time was spend making all of them as good or well documented at all.
 
-All of the functions can either be copy pasted in a PSSession or import the module on the victim PC. All of the functions are designed for a laugh and not destruction. he functions are scrapped of the internet by various sources or transformed into functions by me.
+All of the functions can either be copy pasted in a PSSession or import the module on the victim PC. All of the functions are designed for a laugh and not destruction. They functions are scrapped of the internet by various sources or transformed into functions by me.
 
 I am not responsible for any damage caused. 
+
+## Usage
+
+```
+Import-Module .\PSTrollFunctions.psm1
+```
 
 ## Functions
 
