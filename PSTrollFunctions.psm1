@@ -61,6 +61,17 @@ Function Set-AudioMin {
     [audio]::Volume = 0
 }
 
+Function Set-AudioLevel {
+    Param(
+        [parameter(Mandatory=$true)]
+        [ValidateRange(0,1)]
+        [double]$AudioLevel
+    )
+
+    Start-AudioControl
+    [audio]::Volume = $AudioLevel
+}
+
 Function Start-CatFact 
 {
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
