@@ -16,7 +16,7 @@ Import-Module .\PSTrollFunctions.psm1
 <table>
   <tr>
     <td><tt>Start-AudioControl</tt></td>
-	<td>Enables you to control the audio level by for example [audio]::Volume = 1 (100%)</td>
+	<td>Enables you to control the audio level by for example [audio]::Volume = 1 (100%).</td>
   </tr>
   <tr>
     <td><tt>Set-AudioMax</tt></td>
