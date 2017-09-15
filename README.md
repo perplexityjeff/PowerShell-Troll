@@ -59,6 +59,10 @@ Import-Module .\PSTrollFunctions.psm1
     <td><tt>Send-VoiceMessage</tt></td>
 	<td>Send your lovely message to your co-worker in all its robot computer voice glory.</td>
   </tr>
+  <tr>
+    <td><tt>Send-SuperMario</tt></td>
+	<td>Start playing Super Mario using console beeps.</td>
+  </tr>
 </table>
  
 ## Tested
