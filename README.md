@@ -58,4 +58,9 @@ Import-Module .\PSTrollFunctions.psm1
     <td><tt>Send-VoiceMessage</tt></td>
 	<td>Send your lovely message to your co-worker in all its robot computer voice glory.</td>
   </tr>
- </table>
+</table>
+ 
+## Tested
+ 
+All of them were tested and working as far as I know.
+ 
