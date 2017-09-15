@@ -74,6 +74,7 @@ Function Set-AudioLevel {
 
 Function Start-CatFact 
 {
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     Add-Type -AssemblyName System.speech
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
     $CatFact = Invoke-RestMethod -Uri 'https://catfact.ninja/fact' -Method Get | Select-Object -ExpandProperty fact
