@@ -21,7 +21,7 @@ Import-Module .\PSTrollFunctions.psm1
   </tr>
   <tr>
     <td><tt>Set-AudioLevel</tt></td>
-	<td>Enables you to control the audio level in a range from 0 tot 1.0 (100%) by using a double e.g 0.25.</td>
+	<td>Enables you to control the audio level in a range from 0 to 1.0 (100%) by using a double e.g 0.25.</td>
   </tr>
   <tr>
     <td><tt>Set-AudioMax</tt></td>
