@@ -52,14 +52,6 @@ public class Audio
 '
 }
 
-Function b($a,$b){
-    [console]::beep($a,$b)
-}
-
-Function s($a){
-    Start-Sleep -m $a
-}
-
 #MAIN FUNCTIONS
 Function Set-AudioMax {
     Start-AudioControl
@@ -82,7 +74,7 @@ Function Set-AudioLevel {
     [audio]::Volume = $AudioLevel
 }
 
-Function Start-CatFact 
+Function Send-CatFact 
 {
     Add-Type -AssemblyName System.speech
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -92,16 +84,16 @@ Function Start-CatFact
     $SpeechSynth.Speak($CatFact)
 }
 
-Function Start-RickRoll 
+Function Send-RickRoll 
 {
     Invoke-Expression (New-Object Net.WebClient).DownloadString("http://bit.ly/e0Mw9w")
 }
 
-Function Start-RowBoat 
+Function Send-RowBoat 
 {
     Add-Type -AssemblyName System.speech
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
-    $SpeechSynth.Speak("Row, Row, Row your boat gently down the stream.  Merrily! Merrily! Merrily! Life is but a dream.")    
+    $SpeechSynth.Speak("Row, Row, Row your boat gently down the stream. Merrily! Merrily! Merrily! Life is but a dream.")    
 }
 
 Function Send-Message([string]$Message)
@@ -172,9 +164,14 @@ Function Close-CDDrive{
 [CDROM.Commands]::Close()
 }
 
-Function Start-NotificationSoundSpam
+Function Send-NotificationSoundSpam
 {
-    Get-ChildItem C:\Windows\Media\ -File -Filter *.wav | Select-Object -ExpandProperty Name | Foreach-Object { Start-Sleep -Seconds 4; (New-Object Media.SoundPlayer "C:\WINDOWS\Media\$_").Play(); }
+    param
+    (
+        [Parameter()][int]$Interval = 4
+    )
+
+    Get-ChildItem C:\Windows\Media\ -File -Filter *.wav | Select-Object -ExpandProperty Name | Foreach-Object { Start-Sleep -Seconds $Interval; (New-Object Media.SoundPlayer "C:\WINDOWS\Media\$_").Play(); }
 }
 
 Function Send-VoiceMessage([string]$Message)
@@ -186,6 +183,14 @@ Function Send-VoiceMessage([string]$Message)
 
 Function Send-SuperMario
 {
+    Function b($a,$b){
+        [console]::beep($a,$b)
+    }
+    
+    Function s($a){
+        Start-Sleep -m $a
+    }    
+
     b 660 100;
     s 150;
     b 660 100;
