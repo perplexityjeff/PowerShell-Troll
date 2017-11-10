@@ -49,7 +49,11 @@ Import-Module .\PSTrollFunctions.psm1
   </tr>
   <tr>
     <td><tt>Open-CDDrive</tt></td>
-	<td>Loops and attempts to command every CD Drive it finds to Eject.</td>
+	<td>Attempts to command the CD Drive it finds to Eject.</td>
+  </tr>
+  <tr>
+    <td><tt>Close-CDDrive</tt></td>
+	<td>Attempts to command the CD Drive it finds to Close.</td>
   </tr>
   <tr>
     <td><tt>Start-NotificationSoundSpam</tt></td>
