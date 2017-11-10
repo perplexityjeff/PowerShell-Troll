@@ -52,17 +52,19 @@ public class Audio
 '
 }
 
-#MAIN FUNCTIONS
+#Sets the Audio Level to Maximum
 Function Set-AudioMax {
     Start-AudioControl
     [audio]::Volume = 1
 }
 
+#Sets the Audio Level to a Minimum
 Function Set-AudioMin {
     Start-AudioControl
     [audio]::Volume = 0
 }
 
+#Sets the Audio Level to your own liking
 Function Set-AudioLevel {
     Param(
         [parameter(Mandatory=$true)]
@@ -74,6 +76,7 @@ Function Set-AudioLevel {
     [audio]::Volume = $AudioLevel
 }
 
+#Sends a random catfact to your prank victim
 Function Send-CatFact 
 {
     Add-Type -AssemblyName System.speech
@@ -84,11 +87,13 @@ Function Send-CatFact
     $SpeechSynth.Speak($CatFact)
 }
 
+#Sends the best song ever to your prank victim
 Function Send-RickRoll 
 {
     Invoke-Expression (New-Object Net.WebClient).DownloadString("http://bit.ly/e0Mw9w")
 }
 
+#Sends Row, Row, Row your boat to your prank victim
 Function Send-RowBoat 
 {
     Add-Type -AssemblyName System.speech
@@ -96,11 +101,13 @@ Function Send-RowBoat
     $SpeechSynth.Speak("Row, Row, Row your boat gently down the stream. Merrily! Merrily! Merrily! Life is but a dream.")    
 }
 
+#Sends a custom message to any user logged into the computer
 Function Send-Message([string]$Message)
 {
     msg.exe * $Message
 }
 
+#Open the CD Drive
 Function Open-CDDrive
 {
     Add-Type -TypeDefinition  @'
@@ -133,6 +140,7 @@ Function Open-CDDrive
 [CDROM.Commands]::Eject()
 }
 
+#Close the CD Drive
 Function Close-CDDrive{
     Add-Type -TypeDefinition  @'
     using System;
@@ -164,6 +172,7 @@ Function Close-CDDrive{
 [CDROM.Commands]::Close()
 }
 
+#Send all the notifications that Windows has with a custom interval
 Function Send-NotificationSoundSpam
 {
     param
@@ -174,6 +183,7 @@ Function Send-NotificationSoundSpam
     Get-ChildItem C:\Windows\Media\ -File -Filter *.wav | Select-Object -ExpandProperty Name | Foreach-Object { Start-Sleep -Seconds $Interval; (New-Object Media.SoundPlayer "C:\WINDOWS\Media\$_").Play(); }
 }
 
+#Send a custom voice message
 Function Send-VoiceMessage([string]$Message)
 {
     Add-Type -AssemblyName System.speech
@@ -181,6 +191,7 @@ Function Send-VoiceMessage([string]$Message)
     $SpeechSynth.Speak($Message)
 }
 
+#Sends the song from Super Mario
 Function Send-SuperMario
 {
     Function b($a,$b){
