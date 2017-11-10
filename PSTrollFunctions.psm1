@@ -57,10 +57,8 @@ Function b($a,$b){
 }
 
 Function s($a){
-    sleep -m $a
+    Start-Sleep -m $a
 }
-
-
 
 #MAIN FUNCTIONS
 Function Set-AudioMax {
@@ -86,6 +84,7 @@ Function Set-AudioLevel {
 
 Function Start-CatFact 
 {
+    Add-Type -AssemblyName System.speech
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
     $CatFact = Invoke-RestMethod -Uri 'https://catfact.ninja/fact' -Method Get | Select-Object -ExpandProperty fact
@@ -100,6 +99,7 @@ Function Start-RickRoll
 
 Function Start-RowBoat 
 {
+    Add-Type -AssemblyName System.speech
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
     $SpeechSynth.Speak("Row, Row, Row your boat gently down the stream.  Merrily! Merrily! Merrily! Life is but a dream.")    
 }
@@ -123,6 +123,7 @@ Function Start-NotificationSoundSpam
 
 Function Send-VoiceMessage([string]$Message)
 {
+    Add-Type -AssemblyName System.speech
     $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
     $SpeechSynth.Speak($Message)
 }
