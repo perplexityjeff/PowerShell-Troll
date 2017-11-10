@@ -57,7 +57,7 @@ Import-Module .\PSTrollFunctions.psm1
   </tr>
   <tr>
     <td><tt>Send-NotificationSoundSpam</tt></td>
-	<td>Loops through the whole C:\Windows\Media directory and plays every wav file it finds in there with a 4 second delay.</td>
+	<td>Loops through the whole C:\Windows\Media directory and plays every wav file it finds in there with a default but customizable 4 second delay.</td>
   </tr>
   <tr>
     <td><tt>Send-VoiceMessage</tt></td>
