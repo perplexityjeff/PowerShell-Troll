@@ -32,16 +32,16 @@ Import-Module .\PSTrollFunctions.psm1
 	<td>Enables you to control the audio level and set it to 0% to minimize [insert far to loud of a song here].</td>
   </tr>
   <tr>
-    <td><tt>Start-CatFact</tt></td>
+    <td><tt>Send-CatFact</tt></td>
 	<td>Retrieves a random $CatFact and plays it in audio to the victim.</td>
   </tr>
   <tr>
-    <td><tt>Start-RickRoll</tt></td>
+    <td><tt>Send-RickRoll</tt></td>
 	<td>Starts playing the best song of all time.</td>
   </tr>
   <tr>
-    <td><tt>Start-RowBoat</tt></td>
-	<td>Starts an attempt to sing Row, Row Row your boat.</td>
+    <td><tt>Send-RowBoat</tt></td>
+	<td>Sends an attempt of sing Row, Row Row your boat.</td>
   </tr>
   <tr>
     <td><tt>Send-Message</tt></td>
@@ -56,7 +56,7 @@ Import-Module .\PSTrollFunctions.psm1
 	<td>Attempts to command the CD Drive it finds to Close.</td>
   </tr>
   <tr>
-    <td><tt>Start-NotificationSoundSpam</tt></td>
+    <td><tt>Send-NotificationSoundSpam</tt></td>
 	<td>Loops through the whole C:\Windows\Media directory and plays every wav file it finds in there with a 4 second delay.</td>
   </tr>
   <tr>
