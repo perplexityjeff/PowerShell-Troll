@@ -34,7 +34,7 @@ Import-Module .\PSTrollFunctions.psm1
   <tr>
   <tr>
     <td><tt>Send-Alarm</tt></td>
-	<td>The Alarm clock sounds you know and love in max volume.</td>
+	<td>The Alarm clock sound you know and love in max volume.</td>
   </tr>
     <td><tt>Send-CatFact</tt></td>
 	<td>Retrieves a random $CatFact and plays it in audio to the victim.</td>
