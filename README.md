@@ -32,6 +32,10 @@ Import-Module .\PSTrollFunctions.psm1
 	<td>Enables you to control the audio level and set it to 0% to minimize [insert far to loud of a song here].</td>
   </tr>
   <tr>
+  <tr>
+    <td><tt>Send-Alarm</tt></td>
+	<td>The Alarm clock sounds you know and love in max volume.</td>
+  </tr>
     <td><tt>Send-CatFact</tt></td>
 	<td>Retrieves a random $CatFact and plays it in audio to the victim.</td>
   </tr>
