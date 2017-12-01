@@ -109,8 +109,6 @@ Function Send-Message([string]$Message)
 
 Function Send-Alarm
 {
-    Set-AudioMax
-
     Invoke-WebRequest -Uri "https://github.com/perplexityjeff/PowerShell-Troll/raw/master/AudioFiles/Wake-up-sounds.wav" -OutFile "Wake-up-sounds.wav"
 
     $filepath = ((Get-Childitem "Wake-up-sounds.wav").FullName)
