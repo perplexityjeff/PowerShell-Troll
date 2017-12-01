@@ -34,7 +34,7 @@ Import-Module .\PSTrollFunctions.psm1
   <tr>
   <tr>
     <td><tt>Send-Alarm</tt></td>
-	<td>Send the tradition annoyingly great alarm clock sound you know and love.</td>
+	<td>Send the traditional annoyingly great alarm clock sound you know and love.</td>
   </tr>
     <td><tt>Send-CatFact</tt></td>
 	<td>Retrieves a random $CatFact and plays it in audio to the victim.</td>
