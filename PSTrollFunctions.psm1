@@ -107,6 +107,21 @@ Function Send-Message([string]$Message)
     msg.exe * $Message
 }
 
+Function Send-Alarm
+{
+    Set-AudioMax
+
+    Invoke-WebRequest -Uri "https://github.com/perplexityjeff/PowerShell-Troll/raw/master/AudioFiles/Wake-up-sounds.wav" -OutFile "Wake-up-sounds.wav"
+
+    $filepath = ((Get-Childitem "Wake-up-sounds.wav").FullName)
+    
+    Write-Host $filepath
+
+    $sound = new-Object System.Media.SoundPlayer;
+    $sound.SoundLocation=$filepath;
+    $sound.Play();
+}
+
 #Open the CD Drive
 Function Open-CDDrive
 {
