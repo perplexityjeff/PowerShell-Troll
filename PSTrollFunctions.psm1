@@ -93,6 +93,13 @@ Function Send-RickRoll
     Invoke-Expression (New-Object Net.WebClient).DownloadString("http://bit.ly/e0Mw9w")
 }
 
+#Sends epic gandalf
+Function Send-Gandalf
+{
+    Set-AudioLevel(0.4) #For optimal surprise
+    Start "https://player.vimeo.com/video/198392879?autoplay=1"
+}
+
 #Sends Row, Row, Row your boat to your prank victim
 Function Send-RowBoat 
 {
