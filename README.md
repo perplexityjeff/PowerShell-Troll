@@ -44,6 +44,10 @@ Import-Module .\PSTrollFunctions.psm1
 	<td>Starts playing the best song of all time.</td>
   </tr>
   <tr>
+    <td><tt>Send-Gandalf</tt></td>
+	<td>Starts playing the epic sax guy gandalf edition.</td>
+  </tr>
+  <tr>
     <td><tt>Send-RowBoat</tt></td>
 	<td>Sends an attempt of sing Row, Row Row your boat.</td>
   </tr>
