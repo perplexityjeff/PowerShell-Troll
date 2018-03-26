@@ -43,6 +43,10 @@ Import-Module .\PSTrollFunctions.psm1
     <td><tt>Send-ChuckNorrisFact</tt></td>
 	<td>Retrieves a random $ChuckFact and plays it in audio to the victim.</td>
   </tr>
+  </tr>
+    <td><tt>Send-DadJoke</tt></td>
+	<td>Retrieves a random $DadJoke and plays it in audio to the victim.</td>
+  </tr>
   <tr>
     <td><tt>Send-RickRoll</tt></td>
 	<td>Starts playing the best song of all time.</td>
