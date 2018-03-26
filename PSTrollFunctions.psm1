@@ -87,6 +87,17 @@ Function Send-CatFact
     $SpeechSynth.Speak($CatFact)
 }
 
+#Sends a random Chuck Norris fact to your prank victim
+Function Send-ChuckNorrisFact 
+{
+    Add-Type -AssemblyName System.speech
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
+    $ChuckFact = Invoke-RestMethod -Uri 'https://api.chucknorris.io/jokes/random' -Method Get | Select-Object -ExpandProperty Value
+    $SpeechSynth.Speak("did you know?")
+    $SpeechSynth.Speak($ChuckFact)
+}
+
 #Sends the best song ever to your prank victim
 Function Send-RickRoll 
 {
