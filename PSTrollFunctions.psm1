@@ -98,6 +98,21 @@ Function Send-ChuckNorrisFact
     $SpeechSynth.Speak($ChuckFact)
 }
 
+#Sends a random Dad Joke to your prank victim
+Function Send-DadJoke 
+{
+    Add-Type -AssemblyName System.speech
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
+    
+    $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+    $headers.Add("Accept", 'text/plain')
+    
+    $DadJoke = Invoke-RestMethod -Uri 'https://icanhazdadjoke.com' -Method Get -Headers $headers | Select-Object -ExpandProperty Content
+    
+    $SpeechSynth.Speak($DadJoke)
+}
+
 #Sends the best song ever to your prank victim
 Function Send-RickRoll 
 {
