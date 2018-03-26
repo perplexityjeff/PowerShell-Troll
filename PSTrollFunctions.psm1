@@ -108,7 +108,7 @@ Function Send-DadJoke
     $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
     $headers.Add("Accept", 'text/plain')
     
-    $DadJoke = Invoke-RestMethod -Uri 'https://icanhazdadjoke.com' -Method Get -Headers $headers | Select-Object -ExpandProperty Content
+    $DadJoke = Invoke-RestMethod -Uri 'https://icanhazdadjoke.com' -Method Get -Headers $headers
     
     $SpeechSynth.Speak($DadJoke)
 }
