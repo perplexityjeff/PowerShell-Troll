@@ -76,6 +76,18 @@ Function Set-AudioLevel {
     [audio]::Volume = $AudioLevel
 }
 
+#Unmutes the Audio
+Function Unmute-Audio {
+    Start-AudioControl
+    [Audio]::Mute = $false
+}
+
+#Mutes the Audio
+Function Mute-Audio {
+    Start-AudioControl
+    [Audio]::Mute = $true
+}
+
 #Sends a random catfact to your prank victim
 Function Send-CatFact 
 {
