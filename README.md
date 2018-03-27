@@ -31,7 +31,14 @@ Import-Module .\PSTrollFunctions.psm1
     <td><tt>Set-AudioMin</tt></td>
 	<td>Enables you to control the audio level and set it to 0% to minimize [insert far to loud of a song here].</td>
   </tr>
+	<tr>
+    <td><tt>Unmute-Audio</tt></td>
+	<td>Enables you to control the audio to unmute it.</td>
+  </tr>
   <tr>
+    <td><tt>Mute-Audio</tt></td>
+	<td>Enables you to control the audio to mute it.</td>
+  </tr>
   <tr>
     <td><tt>Send-Alarm</tt></td>
 	<td>Send the traditional annoyingly great alarm clock sound you know and love.</td>
