@@ -138,6 +138,18 @@ Function Send-Gandalf
     Start "https://player.vimeo.com/video/198392879?autoplay=1"
 }
 
+#Opens up ie and sends user to a fake win10 update page and fullscreens ie
+Function Send-FakeUpdate
+{ 
+    Add-Type -Assembly "Microsoft.VisualBasic"
+    $ie = new-object -com "InternetExplorer.Application"
+    $ie.visible = $true
+    $ie.fullscreen = $true
+    $ie.navigate("http://fakeupdate.net/win10u/")
+    While ($ie.Busy) { Sleep -m 10 }
+    $ieProc = Get-Process | ? { $_.MainWindowHandle -eq $ie.HWND }
+    [Microsoft.VisualBasic.Interaction]::AppActivate($ieProc.Id)}
+
 #Sends Row, Row, Row your boat to your prank victim
 Function Send-RowBoat 
 {
