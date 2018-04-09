@@ -55,20 +55,24 @@ Import-Module .\PSTrollFunctions.psm1
 	<td>Retrieves a random $DadJoke and plays it in audio to the victim.</td>
   </tr>
   <tr>
+    <td><tt>Send-FakeUpdate</tt></td>
+        <td>Starts a fake Windows 10 update screen</td>
+  </tr>
+  <tr>
+    <td><tt>Send-Gandalf</tt></td>
+        <td>Starts playing the epic sax guy gandalf edition.</td>
+  </tr>
+  <tr>
+    <td><tt>Send-Message</tt></td>
+        <td>Send a messagebox with your text to all logged in users.</td>
+  </tr>
+  <tr>
     <td><tt>Send-RickRoll</tt></td>
 	<td>Starts playing the best song of all time.</td>
   </tr>
   <tr>
-    <td><tt>Send-Gandalf</tt></td>
-	<td>Starts playing the epic sax guy gandalf edition.</td>
-  </tr>
-  <tr>
     <td><tt>Send-RowBoat</tt></td>
 	<td>Sends an attempt of sing Row, Row Row your boat.</td>
-  </tr>
-  <tr>
-    <td><tt>Send-Message</tt></td>
-	<td>Send a messagebox with your text to all logged in users.</td>
   </tr>
   <tr>
     <td><tt>Open-CDDrive</tt></td>
