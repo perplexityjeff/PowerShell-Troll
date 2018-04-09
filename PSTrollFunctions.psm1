@@ -138,6 +138,11 @@ Function Send-Gandalf
     Start "https://player.vimeo.com/video/198392879?autoplay=1"
 }
 
+#Opens up ie and sends user to a fake win10 update page and fullscreens ie
+Function Send-FakeUpdate
+{ 
+    Start-Process iexplore -ArgumentList "-k http://fakeupdate.net/win10u/"
+
 #Sends Row, Row, Row your boat to your prank victim
 Function Send-RowBoat 
 {
