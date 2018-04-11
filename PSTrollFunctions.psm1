@@ -135,7 +135,7 @@ Function Send-RickRoll
 Function Send-Gandalf
 {
     Set-AudioLevel(0.4) #For optimal surprise
-    Start "https://player.vimeo.com/video/198392879?autoplay=1"
+    Start-Process iexplore -ArgumentList "-k https://player.vimeo.com/video/198392879?autoplay=1"
 }
 
 #Opens up ie and sends user to a fake win10 update page and fullscreens ie
