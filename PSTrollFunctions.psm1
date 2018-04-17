@@ -142,6 +142,7 @@ Function Send-Gandalf
 Function Send-FakeUpdate
 { 
     Start-Process iexplore -ArgumentList "-k http://fakeupdate.net/win10u/"
+}
 
 #Sends Row, Row, Row your boat to your prank victim
 Function Send-RowBoat 
