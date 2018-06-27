@@ -95,6 +95,10 @@ Import-Module .\PSTrollFunctions.psm1
 	<td>Start playing Super Mario using console beeps.</td>
   </tr>
 </table>
+
+## License
+
+This project is licensed under the [MIT license](LICENSE)
  
 ## Tested
  
