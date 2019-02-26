@@ -63,7 +63,7 @@ Function Set-WallPaper
 
     if (-Not(Test-Path $Path))
     {
-        Write-Error "Path to the Wallpaper does not exist"
+        Write-Error "Path to the Wallpaper does not exist, try again"
         return    
     }
 
