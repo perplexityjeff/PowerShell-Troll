@@ -16,6 +16,10 @@ Import-Module .\PSTrollFunctions.psm1
 
 <table>
   <tr>
+    <td><tt>Set-Wallpaper</tt></td>
+	<td>Enables you to get the wallpaper of a victim. Work in progress currently as it doesn't trigger an update.</td>
+  </tr>
+  <tr>
     <td><tt>Start-AudioControl</tt></td>
 	<td>Enables you to control the audio level by for example [audio]::Volume = 1 (100%).</td>
   </tr>
