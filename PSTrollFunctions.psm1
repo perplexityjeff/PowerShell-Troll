@@ -52,6 +52,32 @@ public class Audio
 '
 }
 
+Function Set-WallPaper
+{
+    Param(
+        [parameter(Mandatory=$true)]
+        [string]$Path,
+        [parameter(Mandatory=$true)]
+        [string]$UserName
+    )
+
+    if (-Not(Test-Path $Path))
+    {
+        Write-Error "Path to the Wallpaper does not exist"
+        return    
+    }
+
+    $AdObj = New-Object System.Security.Principal.NTAccount("$UserName")
+    $strSID = $AdObj.Translate([System.Security.Principal.SecurityIdentifier]).Value
+
+    $RemoteReg = [Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey('Users', $Env:Computername)
+
+    $RegPath = $strSID + "\Control Panel\Desktop"
+
+    $WallPaper= $RemoteReg.OpenSubKey($RegPath,$True)
+    $WallPaper.SetValue("Wallpaper",$Path)
+}
+
 #Sets the Audio Level to Maximum
 Function Set-AudioMax {
     Start-AudioControl
