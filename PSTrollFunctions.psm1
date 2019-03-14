@@ -114,6 +114,29 @@ Function Mute-Audio {
     [Audio]::Mute = $true
 }
 
+#Sends a random joke to your victim, has a switch to send as a messagebox
+Function Send-Joke {
+    Param(
+       [switch]$AsMessageBox
+    )
+
+    $Joke = Invoke-RestMethod -Uri 'https://official-joke-api.appspot.com/jokes/random' -Method Get
+
+    if ($AsMessageBox)
+    {
+        $Message = (($Joke).setup) + " " + ($Joke).punchline
+        msg.exe * $Message
+    }
+    else {
+        Add-Type -AssemblyName System.speech
+        [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+        $SpeechSynth = New-Object System.Speech.Synthesis.SpeechSynthesizer
+        $SpeechSynth.Speak(($Joke).setup)
+        Start-Sleep -Seconds 1
+        $SpeechSynth.Speak(($Joke).punchline)
+    }
+}
+
 #Sends a random catfact to your prank victim
 Function Send-CatFact 
 {
