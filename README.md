@@ -51,6 +51,10 @@ Import-Module .\PSTrollFunctions.psm1
 	<td>Retrieves a random $CatFact and plays it in audio to the victim.</td>
   </tr>
   </tr>
+    <td><tt>Send-Joke</tt></td>
+	<td>Sends a random joke to your victim, has a switch to send as a messagebox.</td>
+  </tr>
+  </tr>
     <td><tt>Send-ChuckNorrisFact</tt></td>
 	<td>Retrieves a random $ChuckFact and plays it in audio to the victim.</td>
   </tr>
