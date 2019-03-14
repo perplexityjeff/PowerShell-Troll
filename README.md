@@ -102,6 +102,10 @@ Import-Module .\PSTrollFunctions.psm1
     <td><tt>Send-SuperMario</tt></td>
 	<td>Start playing Super Mario using console beeps.</td>
   </tr>
+   <tr>
+    <td><tt>Send-HappyBirthday</tt></td>
+	<td>Start playing Happy Birthday using console beeps.</td>
+  </tr>
 </table>
 
 ## License
