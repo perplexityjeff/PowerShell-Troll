@@ -16,6 +16,14 @@ Import-Module .\PSTrollFunctions.psm1
 
 <table>
   <tr>
+    <td><tt>Disable-Mouse</tt></td>
+	<td>Disables the victims mouse.</td>
+  </tr>
+  <tr>
+    <td><tt>Enable-Mouse</tt></td>
+	<td>Enables the victims mouse again.</td>
+  </tr>
+  <tr>
     <td><tt>Set-Wallpaper</tt></td>
 	<td>Enables you to set the wallpaper of a victim. Work in progress currently as it doesn't trigger an update.</td>
   </tr>
