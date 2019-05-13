@@ -16,6 +16,14 @@ Import-Module .\PSTrollFunctions.psm1
 
 <table>
   <tr>
+    <td><tt>Get-WAVWebList</tt></td>
+	<td>Get a standard simple list of WAV files that you can use with Send-WAVWeb.</td>
+  </tr>
+  <tr>
+    <td><tt>Send-WAVWeb</tt></td>
+	<td>Downloads the specified wav file from the internet and plays it to the victim.</td>
+  </tr>
+  <tr>
     <td><tt>Disable-Mouse</tt></td>
 	<td>Disables the victims mouse.</td>
   </tr>
