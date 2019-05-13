@@ -52,6 +52,50 @@ public class Audio
 '
 }
 
+Function Get-WAVWebList
+{
+    #Credits: https://pastebin.com/1GGJ8fCg
+
+    $List = @(
+    'http://www.wavlist.com/movies/011/ha-filthy.wav',
+    'http://www.wavlist.com/humor/001/cbdick.wav',
+    'http://www.wavlist.com/humor/001/grndhog.wav',
+    'http://www.wavlist.com/humor/001/duckjob.wav',
+    'http://sounds.stoutman.com/sounds/bitchass.wav',
+    'http://sounds.stoutman.com/sounds/dirtyrat.wav',
+    'http://sounds.stoutman.com/sounds/heybitch.wav',
+    'http://sounds.stoutman.com/sounds/perv.wav',
+    'http://sounds.stoutman.com/sounds/puckerup.wav',
+    'http://sounds.stoutman.com/sounds/shithead.wav',
+    'http://sounds.stoutman.com/sounds/yousmell.wav',
+    'http://sounds.stoutman.com/sounds/fartlaff.wav',
+    'http://sounds.stoutman.com/sounds/dplaugh.wav'
+   )
+
+   return $List
+}
+
+Function Send-WAVWeb
+{
+    Param(
+        [parameter(Mandatory=$true)]
+        [string]$URL
+    )
+
+    if(Test-Path "DownloadedWAVFile.wav")
+    {
+        Remove-Item "DownloadedWAVFile.wav" -Force
+    }
+
+    Invoke-WebRequest -Uri $URL -OutFile "DownloadedWAVFile.wav"
+
+    $filepath = ((Get-Childitem "DownloadedWAVFile.wav").FullName)
+
+    $sound = new-Object System.Media.SoundPlayer;
+    $sound.SoundLocation=$filepath;
+    $sound.Play();
+}
+
 Function Disable-Mouse
 {
     $PNPMice = Get-WmiObject Win32_USBControllerDevice | %{[wmi]$_.dependent} | ?{$_.pnpclass -eq 'Mouse'}
