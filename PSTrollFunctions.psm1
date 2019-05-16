@@ -120,7 +120,6 @@ Function Enable-Keyboard
     $PNPKeyboard.Enable()
 }
 
-
 Function Set-WallPaper
 {
     Param(
