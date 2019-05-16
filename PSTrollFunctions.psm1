@@ -108,6 +108,19 @@ Function Enable-Mouse
     $PNPMice.Enable()
 }
 
+Function Disable-Keyboard
+{
+    $PNPKeyboard = Get-WmiObject Win32_USBControllerDevice | %{[wmi]$_.dependent} | ?{$_.pnpclass -eq 'Keyboard'}
+    $PNPKeyboard.Disable()
+}
+
+Function Enable-Mouse
+{
+    $PNPKeyboard = Get-WmiObject Win32_USBControllerDevice | %{[wmi]$_.dependent} | ?{$_.pnpclass -eq 'Keyboard'}
+    $PNPKeyboard.Enable()
+}
+
+
 Function Set-WallPaper
 {
     Param(
