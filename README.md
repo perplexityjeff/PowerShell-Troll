@@ -24,6 +24,14 @@ Import-Module .\PSTrollFunctions.psm1
 	<td>Downloads the specified wav file from the internet and plays it to the victim.</td>
   </tr>
   <tr>
+    <td><tt>Disable-Keyboard</tt></td>
+	<td>Disables the victims keyboard.</td>
+  </tr>
+  <tr>
+    <td><tt>Enable-Keyboard</tt></td>
+	<td>Enables the victims keyboard again.</td>
+  </tr>
+  <tr>
     <td><tt>Disable-Mouse</tt></td>
 	<td>Disables the victims mouse.</td>
   </tr>
