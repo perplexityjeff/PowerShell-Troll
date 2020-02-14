@@ -49,7 +49,7 @@ Import-Module .\PSTrollFunctions.psm1
   </tr>
   <tr>
     <td><tt>Get-AudioLevel</tt></td>
-	<td>Retrieves the current audio level to you in a range from 0 to 1.0 (100%)./td>
+	<td>Retrieves the current audio level to you in a range from 0 to 1.0 (100%).</td>
   </tr>
   <tr>
     <td><tt>Set-AudioLevel</tt></td>
