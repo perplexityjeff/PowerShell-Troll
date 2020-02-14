@@ -158,6 +158,12 @@ Function Set-AudioMin {
     [audio]::Volume = 0
 }
 
+#Gets the Audio Level that it is currently
+Function Get-AudioLevel {
+   Start-AudioControl
+   [audio]::Volume
+}
+
 #Sets the Audio Level to your own liking
 Function Set-AudioLevel {
     Param(
