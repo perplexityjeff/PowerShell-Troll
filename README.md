@@ -11,6 +11,8 @@ I am not responsible for any damage caused.
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/perplexityjeff/PowerShell-Troll/master/PSTrollFunctions.psm1" -OutFile "PSTrollFunctions.psm1"
 Import-Module .\PSTrollFunctions.psm1
 ```
+## Pull Requests
+Feel free to fork the project and add your joke to it if you know any new ones that can be funny to implement. I'll take a look and add it to the list.
 
 ## Functions
 
