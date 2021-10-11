@@ -42,6 +42,10 @@ Feel free to fork the project and add your joke to it if you know any new ones t
 	<td>Enables the victims mouse again.</td>
   </tr>
   <tr>
+    <td><tt>Minimize-Apps</tt></td>
+	<td>Minimizes all the apps. This does require an interactive shell.</td>
+  </tr>
+  <tr>
     <td><tt>Set-Wallpaper</tt></td>
 	<td>Enables you to set the wallpaper of a victim. Work in progress currently as it doesn't trigger an update.</td>
   </tr>
