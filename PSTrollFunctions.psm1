@@ -378,6 +378,13 @@ Function Send-VoiceMessage([string]$Message)
     $SpeechSynth.Speak($Message)
 }
 
+#Minimazin All apps to taskbar
+Function MinimizeApps
+{
+    $apps = New-Object -ComObject Shell.Application
+    $apps.MinimizeAll()
+}
+
 #Sends the song from Super Mario
 Function Send-SuperMario
 {
