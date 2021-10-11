@@ -378,8 +378,8 @@ Function Send-VoiceMessage([string]$Message)
     $SpeechSynth.Speak($Message)
 }
 
-#Minimazin All apps to taskbar
-Function MinimizeApps
+#Minimize all apps to taskbar
+Function Minimize-Apps
 {
     $apps = New-Object -ComObject Shell.Application
     $apps.MinimizeAll()
