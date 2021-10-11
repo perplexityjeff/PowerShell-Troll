@@ -251,7 +251,7 @@ Function Send-DadJoke
 #Sends the best song ever to your prank victim
 Function Send-RickRoll 
 {
-    Invoke-Expression (New-Object Net.WebClient).DownloadString("http://bit.ly/e0Mw9w")
+    Invoke-Expression (New-Object Net.WebClient).DownloadString("https://www.leeholmes.com/projects/ps_html5/Invoke-PSHtml5.ps1")
 }
 
 #Sends epic gandalf
